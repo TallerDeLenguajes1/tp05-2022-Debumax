@@ -17,26 +17,30 @@ if(resultado){
     Console.WriteLine("se conviertio en un entero de 32");
 }
 else Console.WriteLine("no se pudo convertir en entero");
-num=numero;
-while (num>0)
+if (numero!=0)
 {
-    num=num/10;
-    cont=cont+ 1;
-    //cuento cuantas veces se dividio
-}
-num=numero;
-int potencia=cont-1;
-for (int i=0;i<cont;i++)
-{
-    resto=num%10;
-    multiplicador=(int)(Math.Pow(10,potencia));
-    invertido=invertido + resto*multiplicador;    
-    potencia--;
-    num=num/10;
+    num=numero;
+    while (num>0)
+    {
+        num=num/10;
+        cont=cont+ 1;
+         //cuento cuantas veces se dividio
+    }
+    num=numero;
+    int potencia=cont-1;
+    for (int i=0;i<cont;i++)
+    {
+        resto=num%10;
+        multiplicador=(int)(Math.Pow(10,potencia));
+        invertido=invertido + resto*multiplicador;    
+        potencia--;
+        num=num/10;
+    
+    }
+
+    Console.WriteLine($"valor de num {numero} valor invertido {invertido}");
     
 }
-
-Console.WriteLine($"valor de num {numero} valor invertido {invertido}");
-
+else Console.WriteLine("el valor debe ser diferente de 0");
 /*Console.Write($"{Environment.NewLine}Press any key to exit...");
 Console.ReadKey(true);*/
